@@ -32,7 +32,6 @@ class Rotate
 		@rotated_string = @rotated_string.split("")
 	end
 
-
 	def quick_check
 		if @string.length != @rotated_string.length
 			abort("-1")
@@ -44,7 +43,8 @@ class Rotate
 	end
 
 	def rotations
-
+		# begin to compare to see if the arrays are equal to one another. If not, rotate them once. Add a counter, and check again.
+		# repeat for as much as the string has the value of its length. 
 	end
 
 end
