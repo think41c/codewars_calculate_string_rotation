@@ -15,7 +15,13 @@
 
 class Rotate
 	def initialize(string, rotated_string)
+		@string = string
+		@rotated_string = rotated_string
+		puts determine_length(string)
+	end
 
+	def determine_length(string)
+		@length = @string.length
 	end
 
 	def rotations
