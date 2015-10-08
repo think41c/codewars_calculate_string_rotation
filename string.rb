@@ -19,8 +19,19 @@ class Rotate
 		@rotated_string = rotated_string
 		determine_length(string)
 		quick_check
+		convert_string_to_array
+		convert_rotated_string_to_array
 		rotations
 	end
+
+	def convert_string_to_array
+		@string = @string.split("")
+	end
+	
+	def convert_rotated_string_to_array
+		@rotated_string = @rotated_string.split("")
+	end
+
 
 	def quick_check
 		if @string.length != @rotated_string.length
@@ -38,4 +49,4 @@ class Rotate
 
 end
 
-rotate = Rotate.new("anzy","yan")
+rotate = Rotate.new("anz","yan")
