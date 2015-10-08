@@ -24,7 +24,7 @@ class Rotate
 
 	def quick_check
 		if @string.length != @rotated_string.length
-			puts "-1"
+			abort("-1")
 		end
 	end
 
@@ -38,4 +38,4 @@ class Rotate
 
 end
 
-rotate = Rotate.new("any","yan")
+rotate = Rotate.new("anzy","yan")
