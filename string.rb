@@ -81,32 +81,11 @@ class Rotate
 			# Swap last (length) and second (moving letter)
 			# Etc
 			# Examples:
-			# C B A
-			# C A B
-
-			# T R O Y
-			# Y R O T
-			# Y T O R
-			# Y T R O
-			#
 			# (A)B C D(E) 
 			#  E(B)C D(A)
 			#  E A(C)D(B)
 			#  E A B(D)(C)
 			#  E A B C D - DONE
-
-
-			xyz = 0
-			dex = 0
-			until xyz == @length
-				puts temp = @rotated_string[xyz]
-				puts letter = @rotated_string[@length-1] 
-				@rotated_string[0] = letter
-				puts "Woah it's #{@rotated_string}"
-				puts @length
-				puts "I should be rotating"
-				xyz += 1
-			end
 			rotate_counter += 1
 		end
 	end
