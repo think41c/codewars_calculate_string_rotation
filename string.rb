@@ -69,7 +69,9 @@ class Rotate
 			# Each rotation will require a loop as long as the length of the array to give the final result. 
 			# for [A,B,C] it would transform like:
 			# C,B,C  save A/0 in temp.  (2 becomes 0)
-			# C,A,B  save B/1 in temp2. (temp becomes 1)
+			# C,A,C  save B/1 in temp2. (temp becomes 1)
+			# C,A,B  temp2/B becomes [2]
+			# Rotating again requires the same logic as before.
 			rotate_counter += 1
 		end
 	end
