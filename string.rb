@@ -60,14 +60,15 @@ class Rotate
 	def rotations
 		rotated_index  = 0
 		rotate_counter = 0
+		moving_letter = 0
+			counting   = 0 
+		puts "The word starts out as #{@rotated_string}"	
 		@length.times do 
 			if identical? 
 				puts "They're identical. It took #{rotate_counter} rotation(s)." 
 				break
 			end
 
-			moving_letter = 0
-			counting   = 0 
 			temp_last  = @rotated_string[@length-1]
 			temp_first = @rotated_string[moving_letter]
 			# Swap last (length) and first (moving letter)
@@ -77,6 +78,7 @@ class Rotate
 			p "**"
 			p @rotated_string
 			p "**"
+			moving_letter += 1
 			# If counting is > (Length - 1) then break, else moving letter += 1
 			# Swap last (length) and second (moving letter)
 			# Etc
