@@ -43,10 +43,16 @@ class Rotate
 	end
 
 	def rotations
-		puts @string[0]
-		puts @rotated_string[0]
+		rotated_index = 0
 		@length.times do 
 			puts "Check each letter"
+			if @rotated_string[rotated_index] != @string[0]
+				puts @string[0]
+				puts @rotated_string[rotated_index]
+				puts "They're not the same"
+				rotated_index += 1
+			end
+
 		end
 
 		# if @string[0]
