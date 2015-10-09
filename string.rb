@@ -65,16 +65,43 @@ class Rotate
 				puts "They're identical. It took #{rotate_counter} rotation(s)." 
 				break
 			end
-			# To rotate, we can say for a 3 index array that 2 becomes 0, 1 becomes 2, and 2 becomes 0.
-			# Each rotation will require a loop as long as the length of the array to give the final result. 
-			# for [A,B,C] it would transform like:
-			# C,B,C  save A/0 in temp.  (2 becomes 0)
-			# C,A,C  save B/1 in temp2. (temp becomes 1)
-			# C,A,B  temp2/B becomes [2]
-			# Rotating again requires the same logic as before.
+			# To Rotate: 
+			# Moving letter = 0
+			# Begin counting at 0 
+			# Swap last (length) and first (moving letter)
+			# If counting is > (Length - 1) then break, else moving letter += 1
+			# Swap last (length) and second (moving letter)
+			# Etc
+			# Examples:
+			# C B A
+			# C A B
+
+			# T R O Y
+			# Y R O T
+			# Y T O R
+			# Y T R O
+			#
+			# (A)B C D(E) 
+			#  E(B)C D(A)
+			#  E A(C)D(B)
+			#  E A B(D)(C)
+			#  E A B C D - DONE
+
+
+			xyz = 0
+			dex = 0
+			until xyz == @length
+				puts temp = @rotated_string[xyz]
+				puts letter = @rotated_string[@length-1] 
+				@rotated_string[0] = letter
+				puts "Woah it's #{@rotated_string}"
+				puts @length
+				puts "I should be rotating"
+				xyz += 1
+			end
 			rotate_counter += 1
 		end
 	end
 end
 
-rotate = Rotate.new("ab","ab")
+rotate = Rotate.new("ba","ab")
