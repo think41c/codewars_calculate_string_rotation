@@ -43,6 +43,13 @@ class Rotate
 	end
 
 	def rotations
+		puts @string[0]
+		puts @rotated_string[0]
+		@length.times do 
+			puts "Check each letter"
+		end
+
+		# if @string[0]
 		# begin to compare to see if the arrays are equal to one another. If not, rotate them once. Add a counter, and check again.
 		# repeat for as much as the string has the value of its length. 
 	end
