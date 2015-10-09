@@ -59,22 +59,11 @@ class Rotate
 
 	def rotations
 		rotated_index = 0
-		puts "They're identical. Worry about a counter later." if identical? 
-
+		rotate_counter = 0
 		@length.times do 
-			# This simply needs to rotate the rotated_word around and then check if identical.
-			if @rotated_string[rotated_index] != @string[0]
-				puts @string[0]
-				puts @rotated_string[rotated_index]
-				puts "They're not the same"
-				rotated_index += 1
-			end
-
+			puts "They're identical. It took #{rotate_counter} rotation(s)." if identical? 
+			rotate_counter += 1
 		end
-
-		# if @string[0]
-		# begin to compare to see if the arrays are equal to one another. If not, rotate them once. Add a counter, and check again.
-		# repeat for as much as the string has the value of its length. 
 	end
 end
 
