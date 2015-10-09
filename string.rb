@@ -58,13 +58,18 @@ class Rotate
 	end
 
 	def rotations
-		rotated_index = 0
+		rotated_index  = 0
 		rotate_counter = 0
 		@length.times do 
 			if identical? 
 				puts "They're identical. It took #{rotate_counter} rotation(s)." 
 				break
 			end
+			# To rotate, we can say for a 3 index array that 2 becomes 0, 1 becomes 2, and 2 becomes 0.
+			# Each rotation will require a loop as long as the length of the array to give the final result. 
+			# for [A,B,C] it would transform like:
+			# C,B,C  save A/0 in temp.  (2 becomes 0)
+			# C,A,B  save B/1 in temp2. (temp becomes 1)
 			rotate_counter += 1
 		end
 	end
