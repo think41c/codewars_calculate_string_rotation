@@ -65,10 +65,18 @@ class Rotate
 				puts "They're identical. It took #{rotate_counter} rotation(s)." 
 				break
 			end
-			# To Rotate: 
-			# Moving letter = 0
-			# Begin counting at 0 
+
+			moving_letter = 0
+			counting   = 0 
+			temp_last  = @rotated_string[@length-1]
+			temp_first = @rotated_string[moving_letter]
 			# Swap last (length) and first (moving letter)
+			@rotated_string[@length-1] = temp_first
+			@rotated_string[moving_letter] = temp_last
+
+			p "**"
+			p @rotated_string
+			p "**"
 			# If counting is > (Length - 1) then break, else moving letter += 1
 			# Swap last (length) and second (moving letter)
 			# Etc
@@ -104,4 +112,4 @@ class Rotate
 	end
 end
 
-rotate = Rotate.new("ba","ab")
+rotate = Rotate.new("abcde","eabcd")
