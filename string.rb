@@ -42,10 +42,18 @@ class Rotate
 		@length = @string.length
 	end
 
+	def identical?
+		# Loop through both arrays to compare if equal. If they are on every index, then return TRUE. 
+	end
+
 	def rotations
 		rotated_index = 0
+		if identical? 
+			puts "They're identical. Worry about a counter later."
+		end
+
 		@length.times do 
-			puts "Check each letter"
+			# This simply needs to rotate the rotated_word around and then check if identical.
 			if @rotated_string[rotated_index] != @string[0]
 				puts @string[0]
 				puts @rotated_string[rotated_index]
