@@ -59,9 +59,7 @@ class Rotate
 
 	def rotations
 		rotated_index = 0
-		if identical? 
-			puts "They're identical. Worry about a counter later."
-		end
+		puts "They're identical. Worry about a counter later." if identical? 
 
 		@length.times do 
 			# This simply needs to rotate the rotated_word around and then check if identical.
