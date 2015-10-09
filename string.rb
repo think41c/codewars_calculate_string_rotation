@@ -49,11 +49,12 @@ class Rotate
 			counter += 1
 			if @string[x] == @rotated_string[x]
 				x += 1
-				true
+				result = true
 			else 
-				false
+				result = false
 			end
 		end
+		result
 	end
 
 	def rotations
@@ -77,7 +78,6 @@ class Rotate
 		# begin to compare to see if the arrays are equal to one another. If not, rotate them once. Add a counter, and check again.
 		# repeat for as much as the string has the value of its length. 
 	end
-
 end
 
-rotate = Rotate.new("anz","yan")
+rotate = Rotate.new("a","a")
