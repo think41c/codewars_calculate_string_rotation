@@ -71,23 +71,12 @@ class Rotate
 
 			temp_last  = @rotated_string[@length-1]
 			temp_first = @rotated_string[moving_letter]
-			# Swap last (length) and first (moving letter)
 			@rotated_string[@length-1] = temp_first
 			@rotated_string[moving_letter] = temp_last
 
-			p "**"
 			p @rotated_string
 			p "**"
 			moving_letter += 1
-			# If counting is > (Length - 1) then break, else moving letter += 1
-			# Swap last (length) and second (moving letter)
-			# Etc
-			# Examples:
-			# (A)B C D(E) 
-			#  E(B)C D(A)
-			#  E A(C)D(B)
-			#  E A B(D)(C)
-			#  E A B C D - DONE
 			rotate_counter += 1
 		end
 	end
