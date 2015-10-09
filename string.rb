@@ -61,10 +61,13 @@ class Rotate
 		rotated_index = 0
 		rotate_counter = 0
 		@length.times do 
-			puts "They're identical. It took #{rotate_counter} rotation(s)." if identical? 
+			if identical? 
+				puts "They're identical. It took #{rotate_counter} rotation(s)." 
+				break
+			end
 			rotate_counter += 1
 		end
 	end
 end
 
-rotate = Rotate.new("a","a")
+rotate = Rotate.new("ab","ab")
