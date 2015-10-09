@@ -43,7 +43,17 @@ class Rotate
 	end
 
 	def identical?
-		# Loop through both arrays to compare if equal. If they are on every index, then return TRUE. 
+		x = 0
+		counter = 0
+		until counter == @length
+			counter += 1
+			if @string[x] == @rotated_string[x]
+				x += 1
+				true
+			else 
+				false
+			end
+		end
 	end
 
 	def rotations
