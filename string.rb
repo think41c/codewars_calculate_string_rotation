@@ -64,10 +64,6 @@ class Rotate
 		rotate_counter = 0
 		moving_letter  = 0
 		counting       = 0 
-		if identical? 
-			puts "They're identical. It took #{rotate_counter} rotation(s)." 
-			abort
-		end
 
 		@length.times do 
 			temp_last  = @rotated_string[@length-1]
@@ -86,7 +82,12 @@ class Rotate
 		rotate_once
 		rotate_once
 		rotate_once
-		
+
+		if identical? 
+			puts "They're identical. It took #{rotate_counter} rotation(s)." 
+			abort
+			# Need to determine a better way to end the program than this abort
+		end
 	end
 end
 
