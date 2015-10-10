@@ -83,6 +83,9 @@ class Rotate
 	def rotations
 		puts "The word starts out as #{@rotated_string}"	
 		rotate_once
+		rotate_once
+		rotate_once
+		rotate_once
 		
 	end
 end
