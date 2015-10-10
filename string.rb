@@ -43,6 +43,8 @@ class Rotate
 	end
 
 	def identical?
+		puts "Checking for identical nature of #{@string} vs #{@rotated_string}"
+
 		x = 0
 		counter = 0
 		until counter == @length
@@ -57,28 +59,31 @@ class Rotate
 		result
 	end
 
-	def rotations
+	def rotate_once
 		rotated_index  = 0
 		rotate_counter = 0
-		moving_letter = 0
-			counting   = 0 
-		puts "The word starts out as #{@rotated_string}"	
-		@length.times do 
-			if identical? 
-				puts "They're identical. It took #{rotate_counter} rotation(s)." 
-				break
-			end
+		moving_letter  = 0
+		counting       = 0 
+		if identical? 
+			puts "They're identical. It took #{rotate_counter} rotation(s)." 
+			abort
+		end
 
+		@length.times do 
 			temp_last  = @rotated_string[@length-1]
 			temp_first = @rotated_string[moving_letter]
-			@rotated_string[@length-1] = temp_first
+			@rotated_string[@length-1]     = temp_first
 			@rotated_string[moving_letter] = temp_last
-
-			p @rotated_string
-			p "**"
-			moving_letter += 1
+			moving_letter  += 1
 			rotate_counter += 1
 		end
+		p @rotated_string
+	end
+
+	def rotations
+		puts "The word starts out as #{@rotated_string}"	
+		rotate_once
+		
 	end
 end
 
