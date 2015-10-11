@@ -77,18 +77,14 @@ class Rotate
 	end
 
 	def rotations
+		rotate_counter = 0
 		puts "The word starts out as #{@rotated_string}"	
-		rotate_once
-		rotate_once
-		rotate_once
-		rotate_once
-
-		if identical? 
-			puts "They're identical. It took #{rotate_counter} rotation(s)." 
-			abort
-			# Need to determine a better way to end the program than this abort
+		@length.times do 
+			rotate_once
+			puts "They're identical. It took #{rotate_counter} rotation(s)." if identical?
+			rotate_counter += 1
 		end
-	end
+ 	end
 end
 
 rotate = Rotate.new("abcde","eabcd")
