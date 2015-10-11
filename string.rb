@@ -61,7 +61,6 @@ class Rotate
 
 	def rotate_once
 		rotated_index  = 0
-		rotate_counter = 0
 		moving_letter  = 0
 		counting       = 0 
 
@@ -71,9 +70,8 @@ class Rotate
 			@rotated_string[@length-1]     = temp_first
 			@rotated_string[moving_letter] = temp_last
 			moving_letter  += 1
-			rotate_counter += 1
 		end
-		p @rotated_string
+		@rotated_string
 	end
 
 	def rotations
