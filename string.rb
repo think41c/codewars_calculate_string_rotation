@@ -54,6 +54,7 @@ class Rotate
 				result = true
 			else 
 				result = false
+				counter = @length # This prevents the loop from looking anymore, a single false means it's not identical
 			end
 		end
 		result
