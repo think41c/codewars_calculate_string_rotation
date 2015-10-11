@@ -79,8 +79,8 @@ class Rotate
 		puts "The word starts out as #{@rotated_string}"	
 		@length.times do 
 			rotate_once
-			puts "They're identical. It took #{rotate_counter} rotation(s)." if identical?
 			rotate_counter += 1
+			puts "They're identical. It took #{rotate_counter} rotation(s)." if identical?
 		end
  	end
 end
