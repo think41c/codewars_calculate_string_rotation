@@ -35,7 +35,10 @@ class Rotate
 	def quick_check
 		if @string.length != @rotated_string.length
 			abort("-1")
+		elsif @string == @rotated_string
+			abort("They're identical. It took 0 rotations.")
 		end
+
 	end
 
 	def determine_length(string)
@@ -86,4 +89,4 @@ class Rotate
  	end
 end
 
-rotate = Rotate.new("abcde","eabcd")
+rotate = Rotate.new("aa","aa")
